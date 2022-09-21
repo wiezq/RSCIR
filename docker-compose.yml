@@ -1,0 +1,16 @@
+services:
+  svgdrawer:
+    build: ./SVGDrawer
+    container_name: SVGDrawer
+    ports:
+      - "8080:8080"
+  sortapp:
+    build: ./SortApp
+    container_name: SortApp
+    ports:
+      - "8081:8080"
+  linuxconsole:
+    build: ./LinuxConsole
+    container_name: LinuxConsole
+    ports:
+      - "8082:8080"
