@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<svg viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg">
+    <circle th:if="${shape.getShape() == 0}" cx="4px" cy="4px" r="4" th:fill="${shape.getHexRGB()}"/>
+    <rect th:if="${shape.getShape() == 1}" x="10px" y="10px" width="2px" height="4px" th:fill="${shape.getHexRGB()}" />
+    <polygon th:if="${shape.getShape() == 3}" points="250,60 100,400 400,400" th:fill="${shape.getHexRGB()}"  />
+
+</svg>
+
+</body>
+</html>
